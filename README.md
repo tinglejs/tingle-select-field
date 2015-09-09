@@ -1,10 +1,6 @@
-# tingle-select-field
-
-[![npm version](https://badge.fury.io/js/tingle-select-field.svg)](http://badge.fury.io/js/tingle-select-field)
+# tingle-select-field [![npm version](https://badge.fury.io/js/tingle-select-field.svg)](http://badge.fury.io/js/tingle-select-field)
 
 The `Slot Component` for tinglejs
-
----
 
 ## TL;DR
 
@@ -14,13 +10,13 @@ SelectField 是选择输入表单域。
 
 ## Install
 
-```
+```bash
 npm install tingle-select-field --save
 ```
 
 ## Simple Usage
 
-```
+```js
 constructor(props) {
     super(props);
     this.state = {
@@ -76,7 +72,7 @@ render() {
 
 每个选项必须包括 text（显示的文字） 和 value（选项的值） 属性。典型的格式如下：
 
-```
+```js
 [
     [
         {
@@ -107,7 +103,7 @@ render() {
 
 数组中的元素一般为 data 中对应选项的引用，也可以通过 value 属性来和选项建立绑定。典型的格式如下：
 
-```
+```js
 [
     {
         text: '浙江',
