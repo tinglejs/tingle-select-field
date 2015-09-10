@@ -5,16 +5,14 @@
  * Copyright 2014-2015, Tingle Team, Alinw.
  * All rights reserved.
  */
-.tSelectFieldValue {
-  padding-right: 0.373333333333333rem;
-}
 .tSelectFieldValue > * {
   vertical-align: middle;
 }
 .tSelectFieldIcon {
-  width: 14px;
-  height: 14px;
+  width: 24px;
+  height: 24px;
   fill: #999;
+  margin-right: -5px;
 }
 
 /*# sourceMappingURL=SelectField.css.map */

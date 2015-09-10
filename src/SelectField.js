@@ -56,12 +56,12 @@ class SelectField extends React.Component {
     render() {
         let t = this;
         return (
-            <Field className={classnames('tSelectField', {
+            <Field {...t.props} className={classnames('tSelectField', {
                 [t.props.className]: !!t.props.className
-            })} {...t.props}>
+            })}>
                 <div className="tFB1" onClick={t.handleClick.bind(t)}>
-                    <div className="tSelectFieldValue tOmit tFBH">
-                        <span className="tFB1">{t.props.formatter(t.state.confirmedValue)}</span>
+                    <div className="tSelectFieldValue tFBH tFBAC">
+                        <span className="tFB1 tOmit">{t.props.formatter(t.state.confirmedValue)}</span>
                     {!t.props.readOnly ? <Icon className="tSelectFieldIcon tML6 tFCd" id="tingle-select-field-arrow-right"/> : ''}
                     </div>
                 </div>
