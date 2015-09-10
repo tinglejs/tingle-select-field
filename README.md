@@ -1,12 +1,8 @@
 # tingle-select-field [![npm version](https://badge.fury.io/js/tingle-select-field.svg)](http://badge.fury.io/js/tingle-select-field)
 
-The `Slot Component` for tinglejs
-
-## TL;DR
-
 SelectField 是选择输入表单域。
 
-![效果图](https://img.alicdn.com/tps/TB1LvRBJpXXXXayXFXXXXXXXXXX-325-484.png)
+<img src="https://img.alicdn.com/tps/TB1W2T0JpXXXXbHXFXXXXXXXXXX-750-1254.png" width="375"/>
 
 ## Install
 
