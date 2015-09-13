@@ -59,6 +59,8 @@ render() {
 |---|----|---|----|
 |className|optional|-|自定义样式类|
 |label|required|-|表单域名称|
+|confirmText|optional|完成|确认文案|
+|cancelText|optional|取消|取消文案|
 |data|required|-|数据模型（注1）|
 |value|required|-|选中数据（注2）|
 |readOnly|optional|false|是否只读|

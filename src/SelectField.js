@@ -65,7 +65,7 @@ class SelectField extends React.Component {
                     {!t.props.readOnly ? <Icon className="tSelectFieldIcon tML6 tFCd" id="tingle-select-field-arrow-right"/> : ''}
                     </div>
                 </div>
-                <Slot ref="slot" title={t.props.label} data={t.props.data} value={t.state.value} onChange={t.handleChange.bind(t)} onCancel={t.handleCancel.bind(t)} onConfirm={t.handleConfirm.bind(t)}/>
+                <Slot ref="slot" title={t.props.label} confirmText={t.props.confirmText} cancelText={t.props.cancelText} data={t.props.data} value={t.state.value} onChange={t.handleChange.bind(t)} onCancel={t.handleCancel.bind(t)} onConfirm={t.handleConfirm.bind(t)}/>
             </Field>
         );
     }
