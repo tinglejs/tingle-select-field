@@ -1,7 +1,7 @@
 {
   "name": "tingle-select-field",
   "version": "0.2.1",
-  "description": "The `Slot Component` for tinglejs",
+  "description": "表单选择域",
   "repository": "https://github.com/tinglejs/tingle-select-field.git",
   "author": {
     "name": "gbk",
@@ -16,7 +16,9 @@
     "tingle-select-field",
     "SelectField",
     "select",
-    "field"
+    "field",
+    "表单",
+    "选择域"
   ],
   "dependencies": {
     "classnames": "^2.1.2",
