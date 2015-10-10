@@ -42,11 +42,18 @@ class Demo extends React.Component {
 
         var t = this;
         t.state = {
+            value: null,
             data1: ret1.data,
             value1: ret1.value,
             data2: ret2.data,
             value2: ret2.value
         };
+    }
+
+    handleChange(value) {
+        this.setState({
+            value: value
+        });
     }
 
     handleChange1(value) {
@@ -66,6 +73,7 @@ class Demo extends React.Component {
         return (
             <div>
                 <GroupList title="下拉框演示">
+                    <SelectField label="没有默认值" data={t.state.data1} onChange={t.handleChange.bind(t)} value={t.state.value} placeholder="请输入"/>
                     <SelectField label="单列选择" data={t.state.data1} onChange={t.handleChange1.bind(t)} value={t.state.value1}/>
                     <SelectField label="多列选择" data={t.state.data2} onChange={t.handleChange2.bind(t)} value={t.state.value2}/>
                     <SelectField label="不可选" data={t.state.data1} value={t.state.value1} readOnly={true}/>

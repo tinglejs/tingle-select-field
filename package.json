@@ -1,6 +1,6 @@
 {
   "name": "tingle-select-field",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "表单选择域",
   "repository": "https://github.com/tinglejs/tingle-select-field.git",
   "author": {
@@ -31,11 +31,13 @@
   "devDependencies": {
     "babel-core": "^5.8.19",
     "babel-loader": "^5.3.2",
+    "fastclick": "^1.0.6",
     "gulp": "^3.9.0",
+    "react": "^0.13.3",
     "tingle-dev-tools": "latest",
     "tingle-group-list": "~0.2.0",
-    "fastclick": "^1.0.6",
-    "react": "^0.13.3"
+    "tingle-layer": "~0.2.0",
+    "tingle-mask": "~0.2.0"
   },
   "scripts": {
     "start": "gulp server"

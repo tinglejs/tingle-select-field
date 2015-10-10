@@ -59,10 +59,11 @@ class SelectField extends React.Component {
             <Field {...t.props} className={classnames('tSelectField', {
                 [t.props.className]: !!t.props.className
             })}>
-                <div className="tFB1" onClick={t.handleClick.bind(t)}>
+                <div onClick={t.handleClick.bind(t)}>
+                    {!t.state.confirmedValue ? <div className="tOmit tPA tSelectFieldPlaceholder">{t.props.placeholder}</div> : ''}
                     <div className="tSelectFieldValue tFBH tFBAC">
                         <span className="tFB1 tOmit">{t.props.formatter(t.state.confirmedValue)}</span>
-                    {!t.props.readOnly ? <Icon className="tSelectFieldIcon tML6 tFCd" id="tingle-select-field-arrow-right"/> : ''}
+                        {!t.props.readOnly ? <Icon className="tSelectFieldIcon tML6 tFCd" id="tingle-select-field-arrow-right"/> : ''}
                     </div>
                 </div>
                 <Slot ref="slot" title={t.props.label} confirmText={t.props.confirmText} cancelText={t.props.cancelText} data={t.props.data} value={t.state.value} onChange={t.handleChange.bind(t)} onCancel={t.handleCancel.bind(t)} onConfirm={t.handleConfirm.bind(t)}/>
@@ -73,9 +74,10 @@ class SelectField extends React.Component {
 
 SelectField.defaultProps = {
     data: [],
-    formatter: (value) => value.map((n) => n.text).join(' '),
+    formatter: (value) => value && value.map((n) => n.text).join(' '),
     onChange: Context.noop,
-    readOnly: false
+    readOnly: false,
+    placeholder: ''
 };
 
 // http://facebook.github.io/react/docs/reusable-components.html
@@ -83,10 +85,11 @@ SelectField.propTypes = {
     className: React.PropTypes.string,
     label: React.PropTypes.string.isRequired,
     data: React.PropTypes.array.isRequired,
-    value: React.PropTypes.array.isRequired,
+    value: React.PropTypes.array,
     formatter: React.PropTypes.func,
     onChange: React.PropTypes.func,
-    readOnly: React.PropTypes.bool
+    readOnly: React.PropTypes.bool,
+    placeholder: React.PropTypes.string
 };
 
 SelectField.formatDataValue = Slot.formatDataValue;
